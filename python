@@ -1,0 +1,14 @@
+resume = input("Your skills: ").lower().split(",")
+job = input("Job skills: ").lower().split(",")
+
+matched = []
+missing = []
+
+for skill in job:
+    if skill.strip() in resume:
+        matched.append(skill.strip())
+    else:
+        missing.append(skill.strip())
+
+print("Matched Skills:", matched)
+print("Missing Skills:", missing)
